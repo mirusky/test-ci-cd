@@ -25,7 +25,7 @@ func Setup() *fiber.App {
 	// "OK" response. It should return status
 	// code 200
 	app.Get("/", func(c *fiber.Ctx) error {
-		s := "try to fix"
+		var s string
 
 		s = "donothing"
 
