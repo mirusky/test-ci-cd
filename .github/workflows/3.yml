@@ -1,0 +1,22 @@
+name: Auto labeler
+on:
+  # Useful for triaging code review, and generate compliance status check.
+  # Semantic release? Done.
+  # Make a file change in a mono repo. Tag the mono repo getting changed to generate better release!
+  pull_request:
+
+# Setting up permissions in the workflow to limit the scope of what it can do. Optional!
+permissions:
+  contents: read # the config file
+  issues: write # for labeling issues (on: issues)
+  pull-requests: write # for labeling pull requests (on: pull_request_target or on: pull_request)
+  statuses: write # to generate status
+  checks: write # to generate status
+
+jobs:
+  labeler:
+    name: Labeler
+    runs-on: ubuntu-latest
+    steps:
+      # follows semantic versioning. Lock to different version: v1, v1.5, v1.5.0 or use a commit hash.
+      - uses: fuxingloh/multi-labeler@v2 # v2

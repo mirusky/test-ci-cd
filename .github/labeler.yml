@@ -1,0 +1,41 @@
+version: v1
+labels:
+  - label: "feat"
+    matcher:
+      baseBranch: "^feat/.*"
+
+  - label: "fix"
+    matcher:
+      baseBranch: "^fix/.*"
+
+  - label: "hotfix"
+    matcher:
+      baseBranch: "^hotfix/.*"
+
+  - label: "performance"
+    matcher:
+      baseBranch: "^performance/.*"
+
+  - label: "docs"
+    matcher:
+      baseBranch: "^docs/.*"
+
+  - label: "security"
+    matcher:
+      baseBranch: "^security/.*"
+
+  - label: "ci"
+    matcher:
+      baseBranch: "^ci/.*"
+
+  - label: "cd"
+    matcher:
+      baseBranch: "^cd/.*"
+
+  - label: "refactor"
+    matcher:
+      baseBranch: "^refactor/.*"
+
+  - label: "chore"
+    matcher:
+      baseBranch: "^chore/.*"
