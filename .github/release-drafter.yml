@@ -68,7 +68,7 @@ autolabeler:
       - '/ci\/.+/'
   - label: 'cd'
     branch:
-      - '/ci\/.+/'
+      - '/cd\/.+/'
   - label: 'chore'
     branch:
       - '/chore\/.+/'
